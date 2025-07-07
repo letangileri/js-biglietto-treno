@@ -35,7 +35,7 @@ let prezzoBigliettoScontato = 0;
 
 // controllo età passeggero
 if (etaPasseggero < 18){
-    let scontoMinorenni = 20 / 100 * prezzoBigliettoScontato;
+    let scontoMinorenni = 20 / 100 * prezzoBigliettoBase;
     console.log (prezzoBigliettoBase - scontoMinorenni);
     prezzoBigliettoScontato = prezzoBigliettoBase - scontoMinorenni;
     document.getElementById("prezzo").innerHTML = "Il prezzo del tuo biglietto è " + prezzoBigliettoScontato;
