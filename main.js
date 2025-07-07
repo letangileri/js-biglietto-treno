@@ -35,13 +35,13 @@ let prezzoBigliettoScontato = 0;
 
 // controllo età passeggero
 if (etaPasseggero < 18){
-    console.log (prezzoBigliettoBase - scontoMinorenni);
     let scontoMinorenni = 20 / 100 * prezzoBigliettoScontato;
+    console.log (prezzoBigliettoBase - scontoMinorenni);
     prezzoBigliettoScontato = prezzoBigliettoBase - scontoMinorenni;
     document.getElementById("prezzo").innerHTML = "Il prezzo del tuo biglietto è " + prezzoBigliettoScontato;
 } else if (etaPasseggero > 65){
-    console.log (prezzoBigliettoBase - scontoOver65);
     let scontoOver65 = 40 / 100 * prezzoBigliettoBase;
+    console.log (prezzoBigliettoBase - scontoOver65);
     prezzoBigliettoScontato = prezzoBigliettoBase - scontoOver65;
     document.getElementById("prezzo").innerHTML = "Il prezzo del tuo biglietto è " + prezzoBigliettoScontato;
 } else {
