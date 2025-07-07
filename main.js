@@ -21,8 +21,24 @@ per controllare che la vostra logica sui prezzi funzioni correttamente, provate 
 
 
 */
-
+console.log("hi");
 //chiedere all'utente num chilometri che vuole percorrere e l'età del passeggero
+const numChilometri = prompt('Quanti chilometri vuoi percorrere?'); //memorizzo num chilometri
+const etaPasseggero = prompt('mi dici l eta del passeggero?'); //memorizzo eta
 
-const numChilometri = prompt('Quanti chilometri vuoi percorrere?');
-const etaPasseggero = prompt('mi dici l eta del passeggero?');
+console.log(numChilometri);
+console.log(etaPasseggero);
+
+//memorizzo nelle rispettive variabili il prezzo base del biglietto e i vari sconti in base all'età
+let prezzoBigliettoBase = numChilometri * 0.21;
+let scontoMinorenni = 20 / 100 * prezzoBigliettoBase;
+let scontoOver65 = 40 / 100 * prezzoBigliettoBase;
+
+// controllo età passeggero
+if (etaPasseggero < 18){
+    console.log (prezzoBigliettoBase - scontoMinorenni);
+} else if (etaPasseggero > 65){
+    console.log (prezzoBigliettoBase - scontoOver65);
+} else {
+    console.log (prezzoBigliettoBase);
+}
