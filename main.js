@@ -41,5 +41,7 @@ if (etaPasseggero < 18){
     console.log (prezzoBiglietto - (40 / 100 * prezzoBiglietto));
     prezzoBiglietto = prezzoBiglietto - (40 / 100 * prezzoBiglietto);
 }
-
+prezzoBiglietto = prezzoBiglietto.toFixed(2); //per avere i due decimali
+prezzoBiglietto = prezzoBiglietto.toString(); //trasformo il tipo da numero a stringa per poter utilizzare il method replace 
+prezzoBiglietto = prezzoBiglietto.replace(".", ","); //sostistuisce il . con ,
 document.getElementById("prezzo").innerHTML = "Il prezzo del tuo biglietto è " + prezzoBiglietto;
